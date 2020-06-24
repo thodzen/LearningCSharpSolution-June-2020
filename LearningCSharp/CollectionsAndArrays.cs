@@ -6,6 +6,8 @@ using Xunit;
 
 namespace LearningCSharp
 {
+    // Ctrl+r, then a to run tests on all
+    // Ctrl+r, then t to run tests on single test that cursor is in
     public class CollectionsAndArrays
     {
         [Fact] // Note this is to show you what NOT to do
@@ -76,6 +78,26 @@ namespace LearningCSharp
             friends.Add('d', "David");
 
             Assert.Equal("David", friends['d']);
+        }
+
+        [Fact]
+        public void InitilizingAndEnumeratingADictionary()
+        {
+            var friends = new Dictionary<char, string>
+            {
+                { 's', "Sean" },
+                { 'd', "David" },
+                { 'b', "Sean" },
+            };
+
+            Assert.Equal("David", friends['d']);
+        }
+        
+        [Fact]
+        public void ArraysAreCoolButLimited()
+        {
+            string[] friends = new string[] { "Joe", "Bill", "Sue", "Mary" };
+            Assert.Equal("Joe", friends[0]);
         }
     }
 }

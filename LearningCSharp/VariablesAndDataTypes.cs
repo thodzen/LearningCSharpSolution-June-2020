@@ -93,10 +93,11 @@ namespace LearningCSharp
             // delimited by single quotes
 
             string message = "call your mom";
-            Assert.Equal('C', message[0]);
+            Assert.Equal('c', message[0]);
+
 
             foreach (char c in message)
-            { 
+            {
                 // you would have each character in sequence here
             }
         }
